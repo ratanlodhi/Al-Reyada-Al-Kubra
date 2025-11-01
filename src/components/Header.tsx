@@ -16,8 +16,8 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 p-2 rounded-lg">
-              <img src="/logo.jpeg" alt="Logo" className="w-10 h-10" />
+            <div className="">
+              <img src="/logo.jpeg" alt="Logo" className="w-24 h-18" />
             </div>
             <span className="text-white font-bold text-lg">
               {language === 'en' ? 'Al Reyada Al Kubra' : 'الريادة الكبرى'}
@@ -48,14 +48,6 @@ export default function Header() {
               }`}
             >
               {t('nav_contact')}
-            </Link>
-            <Link
-              to="/admin"
-              className={`transition-colors ${
-                isActive('/admin') ? 'text-yellow-500' : 'text-white hover:text-yellow-400'
-              }`}
-            >
-              {t('nav_admin')}
             </Link>
             <button
               onClick={toggleLanguage}
@@ -109,15 +101,6 @@ export default function Header() {
                   }`}
                 >
                   {t('nav_contact')}
-                </Link>
-                <Link
-                  to="/admin"
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`transition-colors ${
-                    isActive('/admin') ? 'text-yellow-500' : 'text-white hover:text-yellow-400'
-                  }`}
-                >
-                  {t('nav_admin')}
                 </Link>
                 <button
                   onClick={() => {

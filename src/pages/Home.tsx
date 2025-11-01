@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <section
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+            'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/landing.jpeg)',
         }}
       >
         <div className="container mx-auto px-4 text-center">

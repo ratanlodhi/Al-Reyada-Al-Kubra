@@ -11,8 +11,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 rtl:space-x-reverse mb-4">
-              <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 p-2 rounded-lg">
-                <img src="/logo.jpeg" alt="Logo" className="w-6 h-6" />
+              <div className="">
+                <img src="/logo.jpeg" alt="Logo" className="w-24 h-18" />
               </div>
               <span className="font-bold text-lg">Al Reyada Al Kubra</span>
             </div>
