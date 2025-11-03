@@ -12,7 +12,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 rtl:space-x-reverse mb-4">
               <div className="">
-                <img src="/logo.jpeg" alt="Logo" className="w-24 h-18" />
+              <img src="/logo.jpeg" alt="Logo" className="w-80 h-auto" />
               </div>
               <img src="/title.png" alt="Al Reyada Al Kubra" className="h-6 md:h-8 w-auto" />
             </div>

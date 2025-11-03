@@ -40,10 +40,13 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img
-          src="/landing.jpeg"
+        <video
+          src="/cargo.mp4"
           className="absolute inset-0 w-full h-full object-cover z-0"
-          alt="Landing background"
+          autoPlay
+          muted
+          loop
+          playsInline
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
         <div className="container px-4 text-left relative z-20 flex items-center justify-start">
