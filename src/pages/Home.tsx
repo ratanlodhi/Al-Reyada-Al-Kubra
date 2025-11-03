@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { motion } from 'framer-motion';
-import { Plane, Ship, Truck, FileCheck, Warehouse, Package } from 'lucide-react';
+import { Plane, Ship, Truck, FileCheck, Warehouse, Package, Star } from 'lucide-react';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -16,23 +16,47 @@ export default function Home() {
     { icon: Package, title: t('service_packaging'), description: t('service_packaging_desc') },
   ];
 
+  const testimonials = [
+    {
+      name: "John Doe",
+      company: "Global Logistics Inc.",
+      message: "Excellent service and timely deliveries. Highly recommended!",
+      rating: 5
+    },
+    {
+      name: "Jane Smith",
+      company: "International Trade Co.",
+      message: "Professional team and seamless customs clearance.",
+      rating: 5
+    },
+    {
+      name: "Mike Johnson",
+      company: "Export Solutions Ltd.",
+      message: "Reliable and efficient shipping solutions.",
+      rating: 5
+    }
+  ];
+
   return (
     <div className="min-h-screen">
-      <section
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/landing.jpeg)',
-        }}
-      >
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <video
+          src="/background video.mp4"
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
+        <div className="container px-4 text-left relative z-20 flex items-center justify-start">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="max-w-2xl"
           >
             <div className="inline-flex items-center justify-center space-x-4 rtl:space-x-reverse mb-6">
-              <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 p-4 rounded-2xl">
+              <div className="bg-yellow-500 p-4 rounded-2xl shadow-lg">
                 <Plane className="w-12 h-12 text-black" />
               </div>
             </div>
@@ -42,12 +66,12 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-yellow-400 font-semibold mb-4">
               {t('hero_subtitle')}
             </p>
-            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 mb-8">
               {t('hero_description')}
             </p>
             <motion.button
               onClick={() => navigate('/contact')}
-              className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black font-bold px-8 py-4 rounded-lg text-lg transition-all shadow-lg"
+              className="bg-yellow-500 text-black font-bold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:bg-yellow-600"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -81,13 +105,54 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-yellow-600/20 hover:border-yellow-500/50 transition-all"
+                className="bg-black p-8 rounded-xl border border-gray-700 hover:border-yellow-500/50 transition-all shadow-lg"
               >
-                <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-black" />
+                <div className="bg-yellow-600 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                <p className="text-gray-300 leading-relaxed">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-black">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              What Our Clients Say
+            </h2>
+            <div className="w-24 h-1 bg-yellow-600 mx-auto"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-black p-8 rounded-xl shadow-lg border border-gray-700"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-500 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.message}"</p>
+                <div>
+                  <h4 className="font-bold text-white">{testimonial.name}</h4>
+                  <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                </div>
               </motion.div>
             ))}
           </div>

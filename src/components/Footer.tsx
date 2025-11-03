@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="">
                 <img src="/logo.jpeg" alt="Logo" className="w-24 h-18" />
               </div>
-              <span className="font-bold text-lg">Al Reyada Al Kubra</span>
+              <img src="/title.png" alt="Al Reyada Al Kubra" className="h-6 md:h-8 w-auto" />
             </div>
             <p className="text-gray-400 text-sm">{t('footer_tagline')}</p>
           </div>
@@ -59,7 +59,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-2 rtl:space-x-reverse text-sm text-gray-400">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+971 XX XXX XXXX</span>
+                <span>+971 50 456 5567</span>
               </li>
               <li className="flex items-center space-x-2 rtl:space-x-reverse text-sm text-gray-400">
                 <Mail className="w-4 h-4 flex-shrink-0" />
@@ -68,7 +68,7 @@ export default function Footer() {
             </ul>
             <div className="flex space-x-4 rtl:space-x-reverse mt-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/17LTKizWwB/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-yellow-400 transition-colors"
@@ -76,7 +76,7 @@ export default function Footer() {
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/arak_.cargo/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-yellow-400 transition-colors"

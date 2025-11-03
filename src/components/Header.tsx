@@ -19,9 +19,7 @@ export default function Header() {
             <div className="">
               <img src="/logo.jpeg" alt="Logo" className="w-24 h-18" />
             </div>
-            <span className="text-white font-bold text-lg">
-              {language === 'en' ? 'Al Reyada Al Kubra' : 'الريادة الكبرى'}
-            </span>
+            <img src="/title.png" alt="Al Reyada Al Kubra" className="h-6 md:h-8 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
