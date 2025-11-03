@@ -81,6 +81,44 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-10 bg-black">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8"
+          >
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Trusted by Leading Companies
+            </h3>
+            <div className="w-24 h-1 bg-yellow-600 mx-auto mb-8"></div>
+          </motion.div>
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[
+                'FedEx', 'DHL', 'UPS', 'Maersk', 'MSC', 'CMA CGM', 'Hapag-Lloyd', 'Evergreen', 'COSCO', 'ONE', 'Kuehne+Nagel', 'DSV', 'DB Schenker', 'Expeditors', 'Panalpina',
+                'FedEx', 'DHL', 'UPS', 'Maersk', 'MSC', 'CMA CGM', 'Hapag-Lloyd', 'Evergreen', 'COSCO', 'ONE', 'Kuehne+Nagel', 'DSV', 'DB Schenker', 'Expeditors', 'Panalpina'
+              ].map((company, index) => (
+                <span key={index} className="text-yellow-500 font-bold text-lg mx-8">
+                  {company}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <style dangerouslySetInnerHTML={{ __html: `
+          @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+          }
+          .animate-marquee {
+            animation: marquee 30s linear infinite;
+          }
+        ` }} />
+      </section>
+
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
