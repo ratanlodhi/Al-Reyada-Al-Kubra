@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden">
         <video
           src="/cargo.mp4"
           className="absolute inset-0 w-full h-full object-cover z-0"
@@ -49,7 +49,7 @@ export default function Home() {
           playsInline
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-        <div className="container px-4 text-left relative z-20 flex items-center justify-start">
+        <div className="container px-4 text-left md:text-left relative z-20 flex items-center justify-center md:justify-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -61,13 +61,13 @@ export default function Home() {
                 <Plane className="w-12 h-12 text-black" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-bold text-white mb-6 leading-tight">
               {t('hero_title')}
             </h1>
-            <p className="text-xl md:text-2xl text-yellow-400 font-semibold mb-4">
+            <p className="text-lg md:text-2xl text-yellow-400 font-semibold mb-4">
               {t('hero_subtitle')}
             </p>
-            <p className="text-lg text-gray-300 mb-8">
+            <p className="text-base md:text-lg text-gray-300 mb-8">
               {t('hero_description')}
             </p>
             <motion.button
