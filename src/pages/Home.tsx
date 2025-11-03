@@ -8,13 +8,13 @@ export default function Home() {
   const navigate = useNavigate();
 
   const services = [
-    { icon: Plane, title: t('service_air'), description: t('service_air_desc') },
-    { icon: Ship, title: t('service_sea'), description: t('service_sea_desc') },
-    { icon: Truck, title: t('service_land'), description: t('service_land_desc') },
-    { icon: FileCheck, title: t('service_customs'), description: t('service_customs_desc') },
-    { icon: Warehouse, title: t('service_warehouse'), description: t('service_warehouse_desc') },
-    { icon: Package, title: t('service_packaging'), description: t('service_packaging_desc') },
-  ];
+  { icon: Plane, title: t('Express International Delivery'), description: t('Fast and reliable air and sea delivery across the globe.') },
+  { icon: FileCheck, title: t('Customs Clearance Support'), description: t('Efficient documentation and customs handling for smooth delivery.') },
+  { icon: Package, title: t('Real-Time Tracking'), description: t('Track your shipment anytime, anywhere with live updates.') },
+  { icon: Truck, title: t('service_land'), description: t('service_land_desc') },
+  { icon: Warehouse, title: t('service_warehouse'), description: t('service_warehouse_desc') },
+  { icon: Ship, title: t('Freight & Cargo Handling'), description: t('Comprehensive logistics support for all types of freight and cargo.') },
+];
 
   const testimonials = [
     {
