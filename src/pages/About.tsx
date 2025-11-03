@@ -65,6 +65,29 @@ export default function About() {
         </motion.div>
       </section>
 
+      {/* Founder Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mt-12 bg-gradient-to-br from-gray-800 to-gray-900 p-12 rounded-xl border border-yellow-600/20"
+      >
+        <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 rtl:space-x-reverse">
+          <div className="flex-shrink-0">
+            <img
+              src="/founder.jpeg"
+              alt="Founder"
+              className="w-80 h-96 object-cover border-4 border-yellow-400 rounded-lg"
+            />
+          </div>
+          <div className="flex-1 text-center md:text-left">
+            <h2 className="text-3xl font-bold text-white mb-4">Meet Our Founder</h2>
+            <FounderVision />
+          </div>
+        </div>
+      </motion.div>
+
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -130,28 +153,7 @@ export default function About() {
             </p>
           </motion.div>
 
-          {/* Founder Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mt-12 bg-gradient-to-br from-gray-800 to-gray-900 p-12 rounded-xl border border-yellow-600/20"
-          >
-            <div className="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8 rtl:space-x-reverse">
-              <div className="flex-shrink-0">
-                <img
-                  src="/founder.jpeg"
-                  alt="Founder"
-                  className="w-80 h-96 object-cover border-4 border-yellow-400 rounded-lg"
-                />
-              </div>
-              <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl font-bold text-white mb-4">Meet Our Founder</h2>
-                <FounderVision />
-              </div>
-            </div>
-          </motion.div>
+
 
           {/* Stats Section */}
           <motion.div
