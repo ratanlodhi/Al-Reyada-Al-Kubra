@@ -49,7 +49,7 @@ export default function Home() {
           playsInline
         />
         <div className="absolute inset-0 bg-black bg-opacity-40 z-10"></div>
-        <div className="container px-4 text-left md:text-left relative z-20 flex items-center justify-center md:justify-start">
+        <div className="container px-4 text-left md:text-left relative z-20 flex items-start justify-start md:justify-start md:items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
